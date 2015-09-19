@@ -157,14 +157,14 @@ numberOfSetBits x
 hammingDistance :: [Char] -> [Char] -> Int
 hammingDistance a b = sum (map (\ (x, y) -> numberOfSetBits (xor (ord x) (ord y))) (zip a b))
 
-{-| testing the results
+{-| testing the results:
 let a = displh "hello world!"
 let b = displh "hullo world!"
 let c = displh "hello world."
 hammingDistance a b
-513
+> 513
 hammingDistance b c
-491
+> 491
 hammingDistance a c
-512
+> 512
 -}
